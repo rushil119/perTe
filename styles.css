@@ -1,0 +1,212 @@
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url(./assets/fonts/Inter-Regular.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'Inter-SemiBold';
+    src: url(./assets/fonts/Inter-SemiBold.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'Inter-Bold';
+    src: url(./assets/fonts/Inter-Bold.ttf) format('truetype')
+}
+
+:root {
+    --primary: #caa8a1;
+    --primary-background: #F5F5F5;
+    --outline: #bfbfbf;
+    --black: #28282b;
+    --darker-primary: #8c594f;
+}
+
+body {
+    font-family: "Inter-Regular";
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Inter-SemiBold";
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav img {
+    width: 100%;
+    max-width: 226px;
+}
+
+.order_summary {
+    background-color: var(--primary-background);
+}
+
+.order_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 70px;
+    font-size: 28px;
+    font-family: "Inter-SemiBold";
+    color: var(--black);
+}
+
+.order_header p:first-child {
+    position: relative;
+    padding-left: 40px;
+    color: var(--primary);
+}
+
+.order_header p:first-child::before {
+    content: url(./assets/bag.png);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.order_header p:first-child::after {
+    content: url(./assets/up-arrow.png);
+    position: absolute;
+    top: 2px;
+    right: -47px; 
+}
+
+.order_summary hr {
+    border-top: 1px solid var(--outline);
+    margin: 0;
+}
+
+.order_details {
+    padding: 30px 70px;
+}
+
+.order_details .order_items, .order_details .order_value {
+    padding: 30px;
+    background-color: white;
+    border: 1px solid var(--outline);
+    border-radius: 10px;
+}
+
+.order_details .order_items .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--black);
+}
+
+.order_items .item .image {
+    position: relative;
+}
+
+.order_items .item .image::after {
+    position: absolute;
+    content: '1';
+    color: black;
+    top: -15px;
+    right: -15px;
+    height: 30px;
+    width: 30px;
+    background-color: #E0E0E0;
+    border-radius: 50%;
+    padding: 10px 5px 5px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.order_items .item .image img{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: var(--primary-background);
+    padding: 20px;
+}
+
+.order_items .item .description {
+    padding-left: 30px;
+}
+
+.order_items .item .description p:first-child {
+    font-family: "Inter-SemiBold";
+    margin-bottom: 5px;
+    font-size: 28px;
+}
+
+.order_items .item .description p {
+    margin: 0;
+    font-size: 24px;
+}
+
+.order_items .item .value p {
+    font-size: 28px;
+    font-family: "Inter-SemiBold";
+}
+
+.order_value {
+    margin-top: 30px;
+}
+
+.order_value .sub_value {
+    display: flex;
+    justify-content: space-between;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.order_value .sub_value p {
+    font-family: "Inter-SemiBold";
+    font-size: 28px;
+    margin: 0px;
+}
+
+.order_value .sub_value.promo {
+    display: flex;
+    flex-direction: column;
+}
+
+.order_value .sub_value.promo p {
+    margin-bottom: 20px;
+}
+
+.order_value .sub_value.promo p a {
+    position: relative;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.order_value .sub_value.promo p > a::after {
+    content: url(./assets/up-arrow.png);
+    position: absolute;
+    top: 2px;
+    right: -45px;
+}
+
+.order_value .sub_value.promo .apply_code {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid var(--outline);
+    width: 60%;
+    border-radius: 5px;
+}
+
+.order_value .sub_value.promo .apply_code a {
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.order_value .sub_value.promo input {
+    width: 80%;
+    font-size: 24px;
+    border: none;
+}
+
+.order_value .sub_value.promo input:focus {
+    outline: none;
+}
+
+.order_value .sub_value:last-child p {
+    font-family: "Inter-Bold";
+    font-size: 32px;
+}
