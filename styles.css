@@ -147,42 +147,42 @@ nav img {
     margin-top: 30px;
 }
 
-.order_value .sub_value {
+.sub_value {
     display: flex;
     justify-content: space-between;
     color: var(--black);
     margin-bottom: 20px;
 }
 
-.order_value .sub_value p {
+.sub_value p {
     font-family: "Inter-SemiBold";
     font-size: 28px;
     margin: 0px;
 }
 
-.order_value .sub_value.promo {
+.sub_value.promo {
     display: flex;
     flex-direction: column;
 }
 
-.order_value .sub_value.promo p {
+.sub_value.promo p {
     margin-bottom: 20px;
 }
 
-.order_value .sub_value.promo p a {
+.sub_value.promo p a {
     position: relative;
     color: var(--primary);
     text-decoration: none;
 }
 
-.order_value .sub_value.promo p > a::after {
+.sub_value.promo p > a::after {
     content: url(./assets/up-arrow.png);
     position: absolute;
     top: 2px;
     right: -45px;
 }
 
-.order_value .sub_value.promo .apply_code {
+.sub_value.promo .apply_code {
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -191,22 +191,225 @@ nav img {
     border-radius: 5px;
 }
 
-.order_value .sub_value.promo .apply_code a {
+.sub_value.promo .apply_code a {
     text-decoration: none;
     font-size: 24px;
 }
 
-.order_value .sub_value.promo input {
+.sub_value.promo input {
     width: 80%;
     font-size: 24px;
     border: none;
 }
 
-.order_value .sub_value.promo input:focus {
+.sub_value.promo input:focus {
     outline: none;
 }
 
-.order_value .sub_value:last-child p {
+.sub_value:last-child p {
     font-family: "Inter-Bold";
     font-size: 32px;
+}
+
+.history {
+    display: flex;
+    justify-content: center;
+    padding: 30px 70px;
+    font-size: 24px;
+}
+
+.history p {
+    margin: 0px 10px;
+    color: #bfbfbf;
+}
+
+.history a {
+    color: var(--outline);
+}
+
+.history a:first-child {
+    color: var(--black);
+}
+
+.history + p {
+    font-family: "Inter-Bold";
+    font-size: 40px;
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+}
+
+.tabs a {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-family: "Inter-Bold";
+    padding: 30px 40px;
+    border: 3px solid var(--outline);
+    border-radius: 10px;
+    width: 35%;
+    text-decoration: none;
+    color: var(--black);
+    justify-content: center;
+}
+
+.tabs a:first-child {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.tabs a:last-child {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.tabs a.active {
+    border: 3px solid var(--darker-primary);
+}
+
+.tabs a img {
+    margin-right: 30px;
+}
+
+.common-block {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 70px;
+    flex-wrap: wrap;
+}
+
+.common-block p:first-child {
+    font-size: 28px;
+    font-family: "Inter-Bold";
+}
+
+.common-block p:nth-child(2) {
+    font-size: 24px;
+    font-family: "Inter-Regular";
+}
+
+.common-block p:nth-child(2) a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.field {
+    position: relative;
+    width: -webkit-fill-available;
+    background-color: var(--primary-background);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.field input {
+    padding: 50px 140px 20px 50px;
+    font-size: 28px;
+    width: calc(100% - 190px);
+    border: none;
+    border-radius: 5px;
+    font-family: "Inter-SemiBold";
+}
+
+.field label {
+    position: absolute;
+    top: 65px;
+    left: 80px;
+    font-size: 28px;
+    transition: transform 300ms;
+    color: #898989;
+}
+
+.field input:focus ~ label, .field input:not(:placeholder-shown) ~ label {
+    display: block;
+    transform: translateY(-20px) translateX(-8px) scale(0.90);
+}
+
+.field img {
+    position: absolute;
+    top: 55px;
+    right: 80px;
+}
+
+.delivery {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 70px;
+}
+
+.delivery > p:first-child {
+    margin-top: 0;
+    font-size: 28px;
+    font-family: "Inter-Bold";
+}
+
+.delivery .field:not(:only-child) {
+    border-radius: 0px;
+    padding-bottom: 0;
+}
+
+.delivery .field:not(:only-child):last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-bottom: 30px;
+}
+
+.delivery .field:not(:only-child):first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.field_two {
+    display: flex;
+}
+
+.field_two .field:first-child {
+    padding-right: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.field_two .field:last-child {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding-bottom: 0px !important;
+}
+
+.next_buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+.next_buttons a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Inter-Regular";
+}
+
+.next_buttons a:first-child {
+    padding: 30px 0;
+    background-color: var(--darker-primary);
+    width: 100%;
+    margin-bottom: 30px;
+    color: white;
+    opacity: 0.7;
+    border-radius: 10px;
+}
+
+.next_buttons a:last-child {
+    width: fit-content;
+    color: var(--darker-primary);
+}
+
+.delivery hr {
+    margin: 0;
+}
+
+#pickup {
+    height: 500px;
 }
