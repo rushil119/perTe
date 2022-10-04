@@ -390,12 +390,58 @@ nav img {
     transform: translateY(-10px) translateX(-8px) scale(0.90);
 }
 
+.field input:focus {
+    outline: 2px solid var(--primary);
+}
+
+.field select:focus {
+    outline: 2px solid var(--primary);
+}
+
 .field img {
     position: absolute;
     top: 22px;
     right: 20px;
     height: 18px;
     width: 18px;
+}
+
+.field.dropdown select {
+    width: 100%;
+    border: none;
+    padding: 22px 20px 8px 12px;
+    border-radius: 5px;
+    border-right: 10px solid transparent;
+}
+
+.field.dropdown label {
+    top: 15px;
+}
+
+.field.phone {
+    display: flex;
+}
+
+.field.phone select {
+    background-color: var(--primary-background);
+    outline: 1px solid var(--outline);
+    padding-left: 10px;
+    color: var(--black);
+}
+
+.field.phone input:focus~label,
+.field.phone input:not(:placeholder-shown)~label {
+    transform: none;
+}
+
+.field.phone input {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.field.phone label {
+    top: 15px;
+    left: 85px;
 }
 
 .delivery,
@@ -418,7 +464,11 @@ nav img {
 
 .delivery .field:not(:only-child) {
     border-radius: 0px;
-    padding-bottom: 0;
+    padding-bottom: 2px;
+}
+
+.pickup .field:not(:only-child) {
+    border-radius: 0px;
 }
 
 .delivery .field:not(:only-child):last-child {
@@ -430,7 +480,7 @@ nav img {
 }
 
 .field_two .field:first-child {
-    padding-right: 0px;
+    padding-right: 2px;
     padding-bottom: 0px;
     border-bottom-right-radius: 0px;
     border-top-right-radius: 0px;
@@ -439,7 +489,7 @@ nav img {
 .field_two .field:last-child {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
-    padding-bottom: 0px !important;
+    padding-bottom: 2px !important;
 }
 
 .next_buttons {
